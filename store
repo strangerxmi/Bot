@@ -1,0 +1,18 @@
+#SEARCH
+import wikipedia as wp
+if 'who' or 'what' in qtn:
+    print(wp.search(qtn))
+else:
+    print('null')
+
+#google
+try:
+	from googlesearch import search
+except ImportError:
+	print("No module named 'google' found")
+
+# to search
+query = "water"
+
+for j in search(query, tld="co.in", num=10, stop=10, pause=2):
+	print(j)
